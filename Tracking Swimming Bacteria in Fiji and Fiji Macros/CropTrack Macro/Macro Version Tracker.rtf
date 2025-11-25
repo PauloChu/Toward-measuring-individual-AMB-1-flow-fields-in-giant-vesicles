@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 V1 of the CropTrackMacro follows the MTB and centers it every single frame.\
+\
+V2 of the Macro follows the MTB and periodically crops it to the bottom of the field of view when it reaches the top.\
+\
+V3 of the Macro follows the MTB and crops it whenever it moves forward a micron or two.\
+\
+V4 of the Macro follows the MTB and crops it whenever it moves forward a micron or two and then it rotates it (this version doesn\'92t really work that well)\
+\
+V5 of the Macro follows the MTB and crops it whenever it moves forward a micron or two\'97this is the same as V3 but it fixes the bug where it would not include the very first frame (i.e. substack (32-39) would not have slice 32) and also makes the process more efficient by cropping substances instead of individual images.\
+\
+V6 of the Macro is a version of V5 except it does all of the processing in bulk. It asks you to select a folder filled with .tif files and .csv files. The .csv files should be labelled \'93Results [tif file name].csv\'94 and they should be of the manual tracking of the MTB in the corresponding .tif file. \
+\
+V7 of the Macro is V6 but it saves videos as a .tiff not an .avi.\
+\
+V8 is V7 but it the crop width/height was changed to 200 pixels instead of 120.\
+\
+V9 is V8 except that it reverts the change V2 did (it now continually crops instead of periodically)\
+\
+V10 is a combination of V9 and V8\'85 It continually crops it but splits the entire video into 2 frame croppings. It will crop a section, say for time = 0 and time = 1, and then it saves it. It\'92ll crop a section for time = 1 and time = 2 and then save it and so on.\
+\
+V10.1 is a branch of V10 that takes in a single sequence of images and cuts them into pairs in another folder.\
+\
+V11 is V10 except that it masks out an oval at the centre of the cropped sub-stack.\
+\
+V10.2 is a branch of V10.1 that processes folders of folders of images.}
