@@ -1,0 +1,11 @@
+V1 subtracts the background and descpeckles videos in a folder and replaces the videos with the new, processed ones.
+
+V2 does what V1 does but binarizes and feathers the binarized signal.
+
+V3 does what V2 does except that it now watersheds and analyzes the particles and replaces each particle at their centre of mass with a nanosquare, a 3x3 area of signal.
+
+V4 does what V3 does but but without the features of V1 or V2, so no post processing. Intended use is for simulations which do not need post-processing.
+
+V5 does what V4 does except it executes it on a folder of folders. That is you select a folder, and all of the videos within the subfolders will be processed.
+
+“Segment.ijm” is a standalone macro exclusively used for testing.
